@@ -10,6 +10,8 @@
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src= "assets/js/js.js"></script> 
+        
+       <!-- <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script> -->
     
 </head>
 
@@ -34,12 +36,10 @@
                                 <th scope='col'> Minutes Away</th>
                             </tr>
                         </thead>
-                        
                         <tbody>
                             <!-- input and calculate input here-->    
                         </tbody>
                     </table>
-
                 </div>
             </div>
         <br>
@@ -49,25 +49,26 @@
                     <div class = 'card-body'> 
                         <div class='form-group'>
                             <label for='train name'> Train Name </label> 
-                            <input type="text" class="form-control" id="train-name" >
+                            <input type="text" class="form-control" id="trainName" >
                         </div>
 
                         <div class='form-group'>
                             <label for='destination'> Destination </label>
-                            <input type="text" class="form-control" id="train-name" >
+                            <input type="text" class="form-control" id="destination" >
                         </div>
 
                         <div class='form-group'>
                             <label for='first train time'> First Train Time (HH:mm- military time)</label>
-                            <input type="text" class="form-control" id="train-name" >
+                            <input type="text" class="form-control" id="firstTrainTime" >
                         </div>
                             
                         <div class='form-group'>
                             <label for='Train name'> Frequency (min)</label>
-                            <input type="text" class="form-control" id="train-name" >
+                            <input type="text" class="form-control" id="trainFrequency" >
                         </div>
 
-                        <button type="submit" >Submit</button>
+        
+                        <button type="submit" id= 'addTrain'>Submit</button>
                     </div>
         </div>
        
