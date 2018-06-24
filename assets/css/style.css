@@ -4,3 +4,6 @@
     color: #EFFBFF;
 }
 
+.table, th {
+padding: 0.75rem;
+}
