@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title> Train schedule </title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src= "assets/js/js.js"></script> 
+    
+</head>
+
+<body style= 'background-color: #20262d'>
+        
+    <div class="container">
+            <div class = 'jumbotron' style= 'background-color: #235f7f'>
+                    <h1 class= 'text-center' style= 'color: #EFFBFF'>  <i class="fas fa-eye"></i> Keep Your Eyes Trained on the Train Schedule</h1>
+                </div>
+       
+
+        <div class= 'card'>
+            <div class = 'card-header'> <i class="fas fa-train"></i> Current Train Schedule </div>
+                <div class = 'card-body'>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope='col'> Train Name </th>
+                                <th scope='col'> Destination </th>
+                                <th scope='col'> Frequency </th>
+                                <th scope='col'> Next Arrival</th>
+                                <th scope='col'> Minutes Away</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <!-- input and calculate input here-->    
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        <br>
+
+        <div class= 'card'>
+                <div class = 'card-header'>  Add a train </div>
+                    <div class = 'card-body'> 
+                        <div class='form-group'>
+                            <label for='train name'> Train Name </label> 
+                            <input type="text" class="form-control" id="train-name" >
+                        </div>
+
+                        <div class='form-group'>
+                            <label for='destination'> Destination </label>
+                            <input type="text" class="form-control" id="train-name" >
+                        </div>
+
+                        <div class='form-group'>
+                            <label for='first train time'> First Train Time (HH:mm- military time)</label>
+                            <input type="text" class="form-control" id="train-name" >
+                        </div>
+                            
+                        <div class='form-group'>
+                            <label for='Train name'> Frequency (min)</label>
+                            <input type="text" class="form-control" id="train-name" >
+                        </div>
+
+                        <button type="submit" >Submit</button>
+                    </div>
+        </div>
+       
+        
+    
+    </div>
+
+</body>
+</html>
