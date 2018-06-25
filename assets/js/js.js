@@ -54,12 +54,16 @@
 }
 
 // I want to create a function which takes info from dbTrainInfo array, creates rows for each item, and then appends it to the table on the DOM
-function newTableRow (dbTrainInfo) {
+function newTableRow () {
      for (i=0; i < dbTrainInfo.length; i++){
          $('#trainTable > tbody').append(
-             '<tr><td>' + dbTrainInfo.trainName [i] + '</td></tr>'  +
-             '<tr><td>' + dbTrainInfo.destination [i] + '</td></tr>' +
-             '<tr><td>'+ dbTrainInfo.trainTime [i] + '</td></tr>'
+            '<tr>' +
+                '<td>' + dbTrainInfo [i].trainName  + '</td>'  +
+                '<td>' + dbTrainInfo [i].destination + '</td>' +
+                '<td>' + dbTrainInfo [i].trainTime + '</td>' +
+                '<td>' + 'placeholder' + '</td>' +
+                '<td>' + 'placheolder' + '</td>' +
+            '</tr>'
          )
      }
 }
@@ -91,15 +95,18 @@ $(document).ready(function(){
     
     // clears the input text boxes
     initialValues();    
+    
   });
 
   // Function to create firebase event to add train to database
   db.ref().on('child_added', function(childSnapshot, prevChildKey) {
         dbTrainInfo.push(childSnapshot.val());
+        newTableRow();
   })  
 }); 		
 
 console.log(dbTrainInfo);
+
 
 /*========================= Psueudocoding ==============================
     Inputs: Name of train, destination, first train, frequency (min)
