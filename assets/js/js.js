@@ -4,18 +4,19 @@
     Firebase 
         Initialize firebase
         db stands for database
-        var db is assigned to the firebase's database
+        var db is assigned to the firebase's database.
 
     Global Variables
-        dbTrainInfo: an array which contains info which was grabbed from the firebase database
+        var dbTrainInfo: it starts off as an empty array so whatever's in the database can be pushed into here.
 
     Global Functions
         initialValues: clears all the targeted text boxes
+        newTableRow: This appends rows to the table based off the global variable, dbTrainInfo
         
     Calls and Events
         1) document.ready
-        2) captures input on click of the submit button
-        3) 
+        2) function which captures input on click of the submit button
+        3) function to creates firebase event so train info is added to database then pushed out to the array of the variable, dbTrainInfo.
 
     Pseudocoding
     
@@ -23,9 +24,7 @@
         
             train frequency input: 
                 This needs limits to only accept numbers in a certain format.
-            
-            table row function: 
-                
+                            
     ============================ Firebase =======================================*/
 
  // Initialize Firebase
@@ -53,8 +52,12 @@
     var freq = $('#trainFrequency').val('');
 }
 
-// I want to create a function which takes info from dbTrainInfo array, creates rows for each item, and then appends it to the table on the DOM
+
 function newTableRow () {
+    // Emptying the train table before making a new row prevents repeating rows from showing up
+    $('#trainTable > tbody').empty();
+
+    // Looping through the variable in the array so the info can be appended
      for (i=0; i < dbTrainInfo.length; i++){
          $('#trainTable > tbody').append(
             '<tr>' +
@@ -64,7 +67,7 @@ function newTableRow () {
                 '<td>' + 'placeholder' + '</td>' +
                 '<td>' + 'placheolder' + '</td>' +
             '</tr>'
-         )
+         );
      }
 }
 
@@ -95,7 +98,6 @@ $(document).ready(function(){
     
     // clears the input text boxes
     initialValues();    
-    
   });
 
   // Function to create firebase event to add train to database
@@ -106,7 +108,6 @@ $(document).ready(function(){
 }); 		
 
 console.log(dbTrainInfo);
-
 
 /*========================= Psueudocoding ==============================
     Inputs: Name of train, destination, first train, frequency (min)
